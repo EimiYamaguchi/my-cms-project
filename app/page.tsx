@@ -8,6 +8,13 @@ export default function Home() {
         <h1 className={styles.title}>タイトル</h1>
         <p className={styles.description}>サブタイトル</p>
       </div>
+      <Image
+        className={styles.bgimg}
+        src="/background-img.jpg"
+        alt=""
+        width={4000}
+        height={1200}
+      />
     </section>
   );
 }
