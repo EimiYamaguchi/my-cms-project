@@ -69,7 +69,7 @@ export default function Home() {
               <div className={styles.link}>
                 <Image
                   className={styles.image}
-                  src="/no-image.jpg"
+                  src="/sample-image.jpg"
                   alt="No Image"
                   width={1200}
                   height={630}
