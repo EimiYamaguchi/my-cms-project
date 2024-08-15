@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styles from "./index.module.css";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.logoLink}>
+      <Link href="/" className={styles.logoLink}>
         <Image
           src="/logo.svg"
           alt=""
@@ -13,11 +14,11 @@ export default function Header() {
           height={133}
           priority
         />
-      </a>
+      </Link>
       <nav>
         <ul className={styles.items}>
           <li>
-            <a href="/members">Members</a>
+            <Link href="/members">Members</Link>
           </li>
         </ul>
       </nav>
