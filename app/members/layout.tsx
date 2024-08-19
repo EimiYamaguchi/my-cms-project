@@ -1,3 +1,4 @@
+import Hero from "../_components/Hero";
 import Sheet from "../_components/Sheet";
 
 type Props = {
@@ -5,5 +6,10 @@ type Props = {
 };
 
 export default function RootLayout({ children }: Props) {
-  return <Sheet>{children}</Sheet>;
+  return (
+    <>
+      <Hero title="Members" sub="メンバー" />
+      <Sheet>{children}</Sheet>
+    </>
+  );
 }
