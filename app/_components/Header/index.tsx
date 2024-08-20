@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import Link from "next/link";
+import Menu from "../Menu";
 
 export default function Header() {
   return (
@@ -15,19 +16,7 @@ export default function Header() {
           priority
         />
       </Link>
-      <nav className={styles.nav}>
-        <ul className={styles.items}>
-          <li>
-            <Link href="/news">News</Link>
-          </li>
-          <li>
-            <Link href="/members">Members</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <Menu />
     </header>
   );
 }
