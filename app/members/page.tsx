@@ -1,49 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { getMembersList } from "../_libs/microcms";
 
-//メンバーの簡単なプロフィールデータ
-const data = {
-  contents: [
-    {
-      id: "1",
-      image: {
-        url: "/img-member1.jpg",
-        width: 240,
-        height: 240,
-      },
-      name: "Chirpy",
-      position: "チームのモチベーター",
-      profile:
-        "小さな体に大きなエネルギーを秘めたひよこ、Chirpy。彼はいつも明るい笑顔でオフィスを飛び回り、どんな時でもチームの士気を高めてくれます。Chirpyは問題解決に関して独自の視点を持ち、困難な状況でも軽やかに対応することができます。お昼休みには、みんなに元気を与えるための「ピヨピヨ体操」を提案するのが彼の楽しみです。",
-    },
-    {
-      id: "2",
-      image: {
-        url: "/img-member2.jpg",
-        width: 240,
-        height: 240,
-      },
-      name: "Buddy",
-      position: "セキュリティおよびウェルカム担当",
-      profile:
-        "優れた嗅覚と忠誠心を持つ犬、Buddy。彼はオフィスの安全を守ることに誇りを持ち、訪れる全ての人々を温かく迎えてくれます。Buddyの優しさは、ストレスの多い仕事の日でも社員たちの心を癒してくれます。また、ランチタイムにはみんなと一緒に過ごすことが大好きで、ボール遊びや軽いジョギングを提案してリフレッシュを促します。",
-    },
-    {
-      id: "3",
-      image: {
-        url: "/img-member3.jpg",
-        width: 240,
-        height: 240,
-      },
-      name: "Whiskers",
-      position: "リサーチおよびクリエイティブ担当",
-      profile:
-        "鋭い直感と独自のスタイルを持つ猫、Whiskers。彼はリサーチやアイデア出しが得意で、難解な課題にも静かに取り組みます。Whiskersは一人で考える時間を大切にしつつ、独創的なアイデアをチームにもたらします。時には高い棚の上からチームの動向を観察し、クールな視点からアドバイスを送ることも。彼のリラックスした姿勢が、オフィス全体に穏やかな雰囲気をもたらします。",
-    },
-  ],
-};
-
-export default function Page() {
+export default async function Page() {
+  const data = await getMembersList();
   return (
     <div>
       {data.contents.length === 0 ? (
