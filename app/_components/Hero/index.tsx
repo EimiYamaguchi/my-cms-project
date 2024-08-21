@@ -20,6 +20,7 @@ export default function Hero({ title, sub }: Props) {
           alt=""
           width={4000}
           height={1200}
+          priority
         />
       </section>
     </>
