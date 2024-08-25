@@ -27,7 +27,13 @@ export default function NewsList({ news }: Props) {
                 className={styles.image}
               />
             ) : (
-              <Image src="/sample-image.jpg" alt="" width={1200} height={630} />
+              <Image
+                src="/sample-image.jpg"
+                alt=""
+                width={1200}
+                height={630}
+                className={styles.image}
+              />
             )}
             <dl className={styles.content}>
               <dt className={styles.newsItemTitle}>{article.title}</dt>
