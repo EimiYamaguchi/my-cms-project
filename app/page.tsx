@@ -3,10 +3,10 @@ import styles from "./page.module.css";
 import ButtonLink from "./_components/ButtonLink";
 import { getNewsList, News } from "@/app/_libs/microcms";
 import NewsList from "./_components/NewsList";
-import { NEWS_LIST_LIMIT } from "./_constants";
+import { TOP_NEWS_LIMIT } from "./_constants";
 
 export default async function Home() {
-  const data = await getNewsList({ limit: NEWS_LIST_LIMIT });
+  const data = await getNewsList({ limit: TOP_NEWS_LIMIT });
   return (
     <>
       <section className={styles.top}>
