@@ -3,7 +3,6 @@ import Pagination from "@/app/_components/Pagination";
 import { NEWS_LIST_LIMIT } from "@/app/_constants";
 import { getNewsList } from "@/app/_libs/microcms";
 import { notFound } from "next/navigation";
-import { parse } from "path";
 
 type Props = {
   params: {
