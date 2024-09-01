@@ -22,7 +22,7 @@ export default async function Page({ params }: Props) {
         <Category category={category} />
         の一覧
       </p>
-      <NewsList news={news} />;
+      <NewsList news={news} />
     </>
   );
 }
